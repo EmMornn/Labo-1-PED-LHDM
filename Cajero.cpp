@@ -17,8 +17,70 @@ void MostrarMenu()
     cout << endl;
 };
 
-
-float retirar(){
-    saldoi = saldoi - retiro;
+float retirar()
+{
+    saldoi = saldoi - reti;
     cout << "Usted ha retirado: $" << reti << endl;
 };
+
+int main()
+{
+
+    int menu;
+
+    do
+    {
+        menu = MostrarMenu();
+        switch (
+            menu)
+        {
+        case 1:
+            cout << endl;
+            cout << "Has seleccionado: Consultar saldo " << endl;
+            VerSaldo();
+
+            break;
+        case 2:
+            cout << endl;
+            cout << "Has seleccionado: Depositar dinero" << endl;
+            cout << "Ingrese la cantidad que desea depositar a su cuenta: ";
+            cin >> depo;
+            if (depo > 0)
+            {
+                Depositar();
+            }
+            else
+            {
+                cout << "Accion no disponible, intente nuevamente" << endl;
+            }
+
+            break;
+        case 3:
+            cout << endl;
+            cout << "Has seleccionado: Retirar dinero" << endl;
+            cout << "Ingrese la cantidad que desea retirar: ";
+            cin >> reti;
+            if (reti % 5 == 0 && saldoi > reti)
+            {
+                retirar();
+            }
+            else
+            {
+                cout << "Error: Accion no valida" << endl;
+            }
+
+            break;
+        case 4:
+            cout << endl;
+            cout << "Has seleccionado: Salir" << endl;
+            Salir();
+            break;
+        default:
+            cout << "Opcion no identificada, intente nuevamente" << endl;
+            break;
+        }
+
+    } while (menu != 4);
+
+    return 0;
+}
