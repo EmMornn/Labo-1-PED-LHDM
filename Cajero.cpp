@@ -11,3 +11,9 @@ void MostrarMenu()
     cout << "4. Salir" << endl;
     cout << endl;
 };
+
+
+float retirar(){
+    saldoi = saldoi - retiro;
+    cout << "Usted ha retirado: $" << reti << endl;
+};
