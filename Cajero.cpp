@@ -6,6 +6,13 @@ int saldor = 0;
 int depo = 0;
 int reti = 0;
 
+void VerSaldo()
+{
+    cout << "" << endl;
+    cout << "Su saldo disponible es: $" << saldoi << endl;
+    cout << "" << endl;
+}
+
 int MostrarMenu()
 {
     int seleccion;
