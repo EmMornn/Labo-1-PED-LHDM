@@ -30,6 +30,10 @@ int MostrarMenu()
     return seleccion;
 };
 
+void Depositar(int*saldoi, int*depo ){
+    *saldoi+=*depo;
+}
+
 void Retirar(int* saldoi, int* reti)
 {
     *saldoi = *saldoi - *reti;
