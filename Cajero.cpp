@@ -11,3 +11,9 @@ void MostrarMenu()
     cout << "4. Salir" << endl;
     cout << endl;
 };
+
+void deposito (){
+    cout<<"\nBienvenido"<<endl;
+    cout<<"Cuanto dinero quiere depositar: "<<endl;
+    
+}
