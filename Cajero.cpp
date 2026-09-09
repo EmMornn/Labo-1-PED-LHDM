@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+int saldoi = 1000;
+int saldor = 0;
+int depo = 0;
+int reti = 0;
+
 void MostrarMenu()
 {
     cout << endl;
