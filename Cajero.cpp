@@ -23,11 +23,18 @@ int MostrarMenu()
     return seleccion;
 };
 
-float retirar()
+float Retirar()
 {
     saldoi = saldoi - reti;
     cout << "Usted ha retirado: $" << reti << endl;
 };
+
+void Salir()
+{
+    cout << "Cerrando el programa..." << endl;
+    cout << "Gracias por usar el cajero LHDM :) " << endl;
+    cout << endl;
+}
 
 int main()
 {
@@ -68,7 +75,7 @@ int main()
             cin >> reti;
             if (reti % 5 == 0 && saldoi > reti)
             {
-                retirar();
+                Retirar();
             }
             else
             {
