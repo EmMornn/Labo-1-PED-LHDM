@@ -32,10 +32,10 @@ void deposito (){
     return seleccion;
 };
 
-float Retirar()
+void Retirar(int* saldoi, int* reti)
 {
-    saldoi = saldoi - reti;
-    cout << "Usted ha retirado: $" << reti << endl;
+    *saldoi = *saldoi - *reti;
+    cout << "Usted ha retirado: $" << *reti << endl;
 };
 
 void Salir()
@@ -84,7 +84,7 @@ int main()
             cin >> reti;
             if (reti % 5 == 0 && saldoi > reti)
             {
-                Retirar();
+                Retirar(&saldoi, &reti);
             }
             else
             {
