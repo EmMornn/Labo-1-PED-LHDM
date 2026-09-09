@@ -19,10 +19,12 @@ int MostrarMenu()
 
     cout << endl;
     cout << "CAJERO POR LHDM" << endl;
+    cout << endl;
     cout << "1. Ver Saldo Disponible" << endl;
     cout << "2. Transferir Dinero" << endl;
     cout << "3. Retirar Dinero (en multiplos de 5)" << endl;
     cout << "4. Salir" << endl;
+    cout << endl;
     cout << "Seleccione Una opcion: " << endl;
     cout << endl;
 
@@ -30,11 +32,13 @@ int MostrarMenu()
     return seleccion;
 };
 
-void Depositar(int*saldoi, int*depo ){
-    *saldoi+=*depo;
-}
+void Depositar(int *saldoi, int *depo)
+{
+    *saldoi += *depo;
+    cout << "Usted ha depositado: $" << *depo << endl;
+};
 
-void Retirar(int* saldoi, int* reti)
+void Retirar(int *saldoi, int *reti)
 {
     *saldoi = *saldoi - *reti;
     cout << "Usted ha retirado: $" << *reti << endl;
@@ -43,6 +47,7 @@ void Retirar(int* saldoi, int* reti)
 void Salir()
 {
     cout << "Cerrando el programa..." << endl;
+    cout << endl;
     cout << "Gracias por usar el cajero LHDM :) " << endl;
     cout << endl;
 }
@@ -71,7 +76,7 @@ int main()
             cin >> depo;
             if (depo > 0)
             {
-                Depositar();
+                Depositar(&saldoi, &depo);
             }
             else
             {
