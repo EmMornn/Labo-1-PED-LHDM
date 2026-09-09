@@ -6,6 +6,13 @@ int saldor = 0;
 int depo = 0;
 int reti = 0;
 
+void VerSaldo()
+{
+    cout << "" << endl;
+    cout << "Su saldo disponible es: $" << saldoi << endl;
+    cout << "" << endl;
+}
+
 int MostrarMenu()
 {
     int seleccion;
@@ -82,7 +89,7 @@ int main()
             cout << "Has seleccionado: Retirar dinero" << endl;
             cout << "Ingrese la cantidad que desea retirar: ";
             cin >> reti;
-            if (reti % 5 == 0 && saldoi > reti)
+            if (reti % 5 == 0 && saldoi >= reti)
             {
                 Retirar(&saldoi, &reti);
             }
