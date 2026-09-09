@@ -6,15 +6,21 @@ int saldor = 0;
 int depo = 0;
 int reti = 0;
 
-void MostrarMenu()
+int MostrarMenu()
 {
+    int seleccion;
+
     cout << endl;
     cout << "CAJERO POR LHDM" << endl;
     cout << "1. Ver Saldo Disponible" << endl;
     cout << "2. Transferir Dinero" << endl;
     cout << "3. Retirar Dinero (en multiplos de 5)" << endl;
     cout << "4. Salir" << endl;
+    cout << "Seleccione Una opcion: " << endl;
     cout << endl;
+
+    cin >> seleccion;
+    return seleccion;
 };
 
 float retirar()
@@ -31,8 +37,8 @@ int main()
     do
     {
         menu = MostrarMenu();
-        switch (
-            menu)
+
+        switch (menu)
         {
         case 1:
             cout << endl;
